@@ -1,6 +1,6 @@
-import React, { FC, useMemo } from 'react';
-import logo from './logo.svg';
+import React, { useMemo } from 'react';
 import './App.scss';
+import Info from "./Info";
 
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
@@ -52,6 +52,7 @@ const App = () => {
           <WalletModalProvider>
             <WalletMultiButton />
             <WalletDisconnectButton />
+            <Info />
           </WalletModalProvider>
         </WalletProvider>
       </ConnectionProvider>
